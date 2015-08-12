@@ -3,7 +3,7 @@
 var fill = d3.scale.category20();
 
 function fontSizeFactor(){
-    return window.innerWidth / 100.0;
+    return window.innerWidth / 40.0;
 }
 
 var layout = d3.layout.cloud()
