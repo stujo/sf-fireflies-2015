@@ -3,7 +3,7 @@
 var fill = d3.scale.category20();
 
 var layout = d3.layout.cloud()
-    .size([500, 500])
+    .size([window.innerWidth, window.innerWidth])
     .words(
         [
             {text: 'Musical', size: 1},
@@ -30,9 +30,9 @@ var layout = d3.layout.cloud()
             {text: 'Huffle-Puff', size: 2},
         ]
     )
-    .padding(2)
+    .padding(1)
     .font("Impact")
-    .rotate(function() { return Math.random() * 360; })
+    .rotate(function() { return (Math.random() * 60) - 30; })
     .font("Impact")
     .fontSize(function(d) { return Math.sqrt(d.size) * 10; })
     .on("end", draw);
