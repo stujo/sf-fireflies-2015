@@ -9,7 +9,33 @@ var fill = d3.scale.category20();
 
 var layout = d3.layout.cloud()
     .size([500, 500])
-    .words([
+    .words(
+        [
+            {text: 'Musical', size: 1},
+            {text: 'Self-Cared', size: 3},
+            {text: 'Balance', size: 5},
+            {text: 'High-Expectations', size: 3},
+            {text: 'Trusting', size: 1},
+            {text: 'Understanding', size: 2},
+            {text: 'Fun', size: 9},
+            {text: 'Attentive', size: 1},
+            {text: 'Flexible', size: 1},
+            {text: 'Assuming-the-Best', size: 6},
+            {text: 'Honest', size: 3},
+            {text: 'Unassuming', size: 3},
+            {text: 'Teachable', size: 3},
+            {text: 'Positively-Influencing-Others', size: 2},
+            {text: 'Sincere', size: 1},
+            {text: 'True-to-Self', size: 2},
+            {text: 'Inclusive', size: 2},
+            {text: 'Supportive', size: 8},
+            {text: 'Collaborative', size: 18},
+            {text: 'Comforting', size: 3},
+            {text: 'No-One-Left-Behind', size: 2},
+            {text: 'Huffle-Puff', size: 2},
+        ]
+        
+        [
       "Hello", "world", "normally", "you", "want", "more", "words",
       "than", "this"].map(function(d) {
       return {text: d, size: 10 + Math.random() * 90, test: "haha"};
@@ -42,3 +68,5 @@ function draw(words) {
 }
 
 })();</script>
+</body>
+</html>
