@@ -2,6 +2,10 @@
 
 var fill = d3.scale.category20();
 
+function fontSizeFactor(){
+    return window.innerWidth / 100.0;
+}
+
 var layout = d3.layout.cloud()
     .size([window.innerWidth, window.innerWidth])
     .words(
@@ -32,9 +36,9 @@ var layout = d3.layout.cloud()
     )
     .padding(1)
     .font("Impact")
-    .rotate(function() { return (Math.random() * 60) - 30; })
+    .rotate(function() { return (Math.random() * 90) - 45; })
     .font("Impact")
-    .fontSize(function(d) { return Math.sqrt(d.size) * 10; })
+    .fontSize(function(d) { return Math.sqrt(d.size) * fontSizeFactor(); })
     .on("end", draw);
 
 layout.start();
