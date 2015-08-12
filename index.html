@@ -35,11 +35,11 @@ var layout = d3.layout.cloud()
             {text: 'Huffle-Puff', size: 2},
         ]
     )
-    .padding(5)
+    .padding(2)
     .font("Impact")
     .rotate(function() { return Math.random() * 360; })
     .font("Impact")
-    .fontSize(function(d) { return Math.sqrt(d.value); })
+    .fontSize(function(d) { return Math.sqrt(d.size); })
     .on("end", draw);
 
 layout.start();
