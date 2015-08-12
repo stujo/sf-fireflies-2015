@@ -44,8 +44,12 @@ var layout = d3.layout.cloud()
 layout.start();
 
 function draw(words) {
-  d3.select("#tag-cloud").select("svg").remove();
-  d3.select("#tag-cloud").append("svg")
+  d3.select("#tag-cloud").select("*").remove();
+ 
+  d3.select("#tag-cloud")   
+    .append("div")
+    .classed("svg-container", true) //container class to make it responsive
+    .append("svg")
       .attr("width", layout.size()[0])
       .attr("height", layout.size()[1])
     .append("g")
