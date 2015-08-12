@@ -39,7 +39,7 @@ var layout = d3.layout.cloud()
     .font("Impact")
     .rotate(function() { return Math.random() * 360; })
     .font("Impact")
-    .fontSize(function(d) { return Math.sqrt(d.size); })
+    .fontSize(function(d) { return Math.sqrt(d.size) * 10; })
     .on("end", draw);
 
 layout.start();
